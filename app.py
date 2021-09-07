@@ -6,6 +6,7 @@ import json
 
 app = Flask(__name__)
 
+#this is the data. I want to use it like -> If GET request name is in Data, return link to Philosophers Wiki
 with open('philosophers.csv') as phil:
     read = csv.reader(phil)
     l = []
