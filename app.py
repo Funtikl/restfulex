@@ -33,11 +33,11 @@ class Hello(Resource):
                     b = {item[i]: item[i+1] for i in range(0, len(item), 2)}
                     if name in b:
                         l.append(b)
-                print(json.dumps(l)) 
+                return json.dumps(l)[1]
         csvfile(name)
 api = Api(app)
 
 api.add_resource(Hello, '/home/<string:name>')
 
 if __name__ == '__main__':
-    app.run(port=8070,debug=True)
+    app.run(port=5000,debug=True)
